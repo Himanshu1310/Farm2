@@ -3,6 +3,7 @@ package com.himanshu.farm.service;
 import java.util.List;
 
 import com.himanshu.farm.entity.Animal;
+import com.himanshu.farm.error.AnimalNotFoundException;
 
 public interface AnimalService {
 
@@ -10,7 +11,7 @@ public interface AnimalService {
 
 	public List<Animal> fetchAnimalList();
 	
-	public Animal fetchAnimalById(Long animalId);
+	public Animal fetchAnimalById(Long animalId) throws AnimalNotFoundException;
 	
 	public void deleteAnimalById(Long animalId);
 
